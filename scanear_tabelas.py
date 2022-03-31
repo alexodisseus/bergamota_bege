@@ -1,3 +1,5 @@
+from openpyxl import load_workbook
+import os
 print('olá')
 
 #file tem que escanear a pasta do diretorio para encontrar os arquivos
@@ -6,9 +8,23 @@ print('olá')
 #devolver a comparação dos mesmos
 
 
-file = 'doc/'
 
-workbook = load_workbook(filename=file)
+
+
+
+cwd = 'doc/'
+
+dire = os.listdir(cwd)
+#paega os arquivos da pasta doc/
+print(dire)
+
+
+#for y in dire: - continuar para escanear os dois arquivos
+    
+    
+
+
+workbook = load_workbook(filename=cwd)
 
 
 sheet = workbook.active
